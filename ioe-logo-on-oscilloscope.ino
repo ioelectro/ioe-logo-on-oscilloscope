@@ -20,6 +20,11 @@ point_s ziro={0,0};
 
 point_s points_buffer[33];
 
+void setup()
+{
+  DDRB=0xff;
+  DDRD=0xff;
+}
 
 void draw_point(point_s point)
 {
@@ -33,22 +38,11 @@ void draw_points(point_s *p)
   for(j=0;j<33;j++)
   {
     draw_point(p[j]);
-    delay_slot();
+    delayMicroseconds(2);
   }
 }
 
-void setup()
-{
-  DDRB=0xff;
-  DDRD=0xff;
-}
-
-void delay_slot()
-{
-  delayMicroseconds(2);
-}
-
-void loop() 
+void loop()
 {
   for(p=0;p<314;p++)
   {
