@@ -61,6 +61,7 @@ void draw_points(point_s *p)
 
 void loop()
 {
+  //while(1)draw_points(points);
   for(p=0;p<314;p++)
   {
     sx=(sin(p/100)*7);
